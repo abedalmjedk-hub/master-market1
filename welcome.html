@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Market - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hide scrollbar for welcome page */
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="welcome-screen">
+        <img src="assets/logo.svg" alt="Master Market Logo" class="welcome-logo">
+        <h1 class="welcome-title">Master Market</h1>
+        <p class="welcome-subtitle">بوابتك الرقمية لعالم الترفيه</p>
+
+        <a href="index.html" class="enter-btn">
+            دخول الموقع
+        </a>
+    </section>
+
+    <!-- Flying Background Script -->
+    <script src="script.js"></script>
+
+    <!-- Particles/Glow Effect Script (Optional - simple inline) -->
+    <script>
+        // Add a simple entrance animation
+        window.onload = () => {
+            const elements = document.querySelectorAll('.welcome-logo, .welcome-title, .welcome-subtitle, .enter-btn');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.8s ease';
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 300 * (index + 1));
+            });
+        };
+    </script>
+</body>
+
+</html>
